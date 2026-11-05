@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dacha.vipclass — Ultra Luxury Villa Resort</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Ikonkalar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Swiper.js Slider (Rasmlar uchun) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Pannellum 3D Panorama (3D Tur uchun) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        luxury: ['Cinzel', 'serif'],
+                    },
+                    colors: {
+                        gold: {
+                            100: '#FFF9D2',
+                            300: '#FFE885',
+                            400: '#FACC15',
+                            500: '#EAB308',
+                            600: '#CA8A04',
+                            900: '#422006'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #030712;
+            color: #f8fafc;
+            background-image:
+                    radial-gradient(at 0% 0%, rgba(234, 179, 8, 0.07) 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+        }
+
+        /* Luxury Shisha va Oltin Effekti */
+        .luxury-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(234, 179, 8, 0.25);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        .gold-text-shimmer {
+            background: linear-gradient(135deg, #FFF9D2 0%, #EAB308 40%, #A16207 70%, #FFE885 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 4s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+
+        .gold-border-glow {
+            animation: borderPulse 3s infinite alternate;
+        }
+
+        @keyframes borderPulse {
+            0% { border-color: rgba(234, 179, 8, 0.2); box-shadow: 0 0 15px rgba(234, 179, 8, 0.05); }
+            100% { border-color: rgba(234, 179, 8, 0.6); box-shadow: 0 0 30px rgba(234, 179, 8, 0.25); }
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #EAB308 !important;
+            width: 24px !important;
+            border-radius: 4px !important;
+        }
+        .swiper-pagination-bullet {
+            background: #ffffff;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-2 sm:p-4 selection:bg-gold-500 selection:text-black">
+
+<main class="w-full max-w-md space-y-4 my-2">
+
+    <!-- 1. Header (Brending) -->
+    <header class="luxury-card rounded-2xl p-4 flex items-center justify-between gold-border-glow">
+        <div>
+            <h1 class="font-luxury text-xl font-extrabold tracking-widest gold-text-shimmer">
+                DACHA.VIPCLASS
+            </h1>
+            <span class="text-[9px] text-slate-400 uppercase tracking-widest block font-medium">Ultra Luxury Villa Resort</span>
+        </div>
+        <span class="px-3 py-1 rounded-full text-[10px] font-bold bg-gold-500/10 text-gold-400 border border-gold-500/40 uppercase tracking-wider flex items-center gap-1">
+        <i class="fa-solid fa-gem text-[10px]"></i> VIP Elite
+      </span>
+    </header>
+
+    <!-- 2. Hashamatli Rasmlar Slideri (Photo Tour) -->
+    <section class="luxury-card rounded-3xl p-2 gold-border-glow overflow-hidden relative">
+        <div class="swiper mainSlider rounded-2xl h-64 w-full">
+            <div class="swiper-wrapper">
+                <!-- Rasm 1 -->
+                <div class="swiper-slide relative">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-xs font-bold text-white uppercase tracking-wider"><i class="fa-solid fa-water-ladder text-gold-400 mr-1"></i> VIP Basseyn va Panorama</span>
+                    </div>
+                </div>
+                <!-- Rasm 2 -->
+                <div class="swiper-slide relative">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-xs font-bold text-white uppercase tracking-wider"><i class="fa-solid fa-house-chimney text-gold-400 mr-1"></i> Tashqi Ko'rinish</span>
+                    </div>
+                </div>
+                <!-- Rasm 3 -->
+                <div class="swiper-slide relative">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-xs font-bold text-white uppercase tracking-wider"><i class="fa-solid fa-couch text-gold-400 mr-1"></i> Hashamatli Mehmonxona</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- 3. 3D Virtual Tur -->
+    <section class="luxury-card rounded-3xl p-4 border-gold-500/20">
+        <div class="flex items-center justify-between mb-3">
+            <h3 class="font-luxury font-bold text-white text-sm flex items-center gap-2">
+                <i class="fa-solid fa-vr-cardboard text-gold-400"></i> 3D Virtual Sayohat
+            </h3>
+            <span class="text-[10px] bg-gold-500/10 text-gold-400 px-2.5 py-0.5 rounded-full border border-gold-500/30">360° Interaktiv</span>
+        </div>
+        <div id="panorama" class="w-full h-52 rounded-2xl overflow-hidden border border-slate-700/50"></div>
+    </section>
+
+    <!-- 4. Ega va Qulayliklar Profil-Karti -->
+    <section class="luxury-card rounded-3xl p-6 text-center relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-gold-500/10 rounded-full blur-3xl"></div>
+
+        <!-- Avatar -->
+        <div class="relative inline-block mb-3">
+            <div class="w-20 h-20 rounded-full p-0.5 bg-gradient-to-tr from-gold-500 via-amber-200 to-gold-600 shadow-2xl mx-auto">
+                <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-crown text-3xl text-gold-400"></i>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="font-luxury text-2xl font-bold text-white tracking-wide">Mehridillayev Samandar</h2>
+        <p class="text-slate-400 text-xs flex items-center justify-center gap-1 mt-1 mb-4">
+            <i class="fa-solid fa-location-dot text-rose-500 animate-pulse"></i> Chorvoq, Toza havo , Tabiat Bag'rida
+        </p>
+
+        <!-- Quote -->
+        <p class="text-xs text-slate-300 leading-relaxed font-light italic bg-slate-950/40 p-3.5 rounded-2xl border border-white/5 mb-5">
+            "Oila va eng qadrli do'stlaringiz uchun oliy darajadagi sharoitlar, mutlaq tinchlik va premium qulaylik."
+        </p>
+
+        <!-- Qulayliklar Grid -->
+        <div class="grid grid-cols-2 gap-2 text-left">
+            <div class="p-3 rounded-xl bg-slate-900/60 border border-gold-500/10 flex items-center gap-2.5 text-xs">
+                <i class="fa-solid fa-water-ladder text-gold-400"></i> Basseyn (Isitiladigan)
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/60 border border-gold-500/10 flex items-center gap-2.5 text-xs">
+                <i class="fa-solid fa-hot-tub-person text-gold-400"></i> Fin Saunasi
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/60 border border-gold-500/10 flex items-center gap-2.5 text-xs">
+                <i class="fa-solid fa-gamepad text-gold-400"></i> PlayStation 5
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/60 border border-gold-500/10 flex items-center gap-2.5 text-xs">
+                <i class="fa-solid fa-utensils text-gold-400"></i> Yozgi Oshxona
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Narx va Holat -->
+    <section class="luxury-card rounded-2xl p-4 flex items-center justify-between">
+        <div>
+            <span class="text-[9px] font-bold tracking-widest text-slate-400 uppercase block">IJARA QIYMATI</span>
+            <div class="flex items-baseline gap-1">
+                <span class="font-luxury text-2xl font-black gold-text-shimmer">1 500 000</span>
+                <span class="text-xs font-bold text-gold-400">UZS / kun</span>
+            </div>
+        </div>
+        <div class="bg-emerald-950/80 border border-emerald-500/30 px-3 py-1.5 rounded-xl flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="text-xs font-bold text-emerald-400">Bo'sh Kunlar Mavjud</span>
+        </div>
+    </section>
+
+    <!-- 6. VIP Bron Qilish Formasi -->
+    <section class="luxury-card rounded-3xl p-5 border-gold-500/30 space-y-3">
+        <h3 class="font-luxury text-sm font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-calendar-days text-gold-400"></i> Joyni Bron Qilish
+        </h3>
+
+        <div class="grid grid-cols-2 gap-2 text-xs">
+            <div>
+                <label class="block text-slate-300 mb-1 font-medium">Kelish sanasi:</label>
+                <input
+                        type="date"
+                        id="checkIn"
+                        onclick="this.showPicker()"
+                        style="color-scheme: dark;"
+                        class="w-full bg-slate-900 border border-gold-500/30 rounded-xl p-3 text-white font-semibold focus:border-gold-400 outline-none cursor-pointer">
+            </div>
+            <div>
+                <label class="block text-slate-300 mb-1 font-medium">Ketish sanasi:</label>
+                <input
+                        type="date"
+                        id="checkOut"
+                        onclick="this.showPicker()"
+                        style="color-scheme: dark;"
+                        class="w-full bg-slate-900 border border-gold-500/30 rounded-xl p-3 text-white font-semibold focus:border-gold-400 outline-none cursor-pointer">
+            </div>
+        </div>
+
+        <button onclick="sendBooking()" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600 hover:opacity-95 text-slate-950 font-luxury font-black text-xs uppercase tracking-widest shadow-xl shadow-gold-500/10 transition-all active:scale-[0.98]">
+            VIP Bron So'rovini Yuborish
+        </button>
+    </section>
+
+    <!-- 7. Ijtimoiy Tarmoqlar va Aloqa -->
+    <footer class="space-y-2 pt-2">
+        <div class="grid grid-cols-2 gap-2">
+            <!-- Instagram -->
+            <a href="https://instagram.com/dacha.vipclass" target="_blank" class="p-3.5 rounded-xl bg-gradient-to-r from-purple-900/60 to-pink-900/60 border border-pink-500/30 text-white font-semibold text-xs flex items-center justify-center gap-2 hover:border-pink-500 transition-all">
+                <i class="fa-brands fa-instagram text-base text-pink-400"></i> Instagram
+            </a>
+            <!-- Telegram Shaxsiy -->
+            <a href="https://t.me/samandarmexridillayev" target="_blank" class="p-3.5 rounded-xl bg-sky-950/60 border border-sky-500/30 text-white font-semibold text-xs flex items-center justify-center gap-2 hover:border-sky-400 transition-all">
+                <i class="fa-paper-plane text-base text-sky-400"></i> TG Shaxsiy
+            </a>
+            <!-- Telegram Kanal -->
+            <a href="https://t.me/samandarmehridillayev" target="_blank" class="p-3.5 rounded-xl bg-blue-950/60 border border-blue-500/30 text-white font-semibold text-xs flex items-center justify-center gap-2 hover:border-blue-400 transition-all">
+                <i class="fa-bullhorn text-base text-blue-400"></i> TG Kanal
+            </a>
+            <!-- Nomer (Telefon) -->
+            <a href="tel:+998889902010" class="p-3.5 rounded-xl bg-emerald-950/60 border border-emerald-500/30 text-white font-semibold text-xs flex items-center justify-center gap-2 hover:border-emerald-400 transition-all">
+                <i class="fa-solid fa-phone text-base text-emerald-400"></i> Qo'ng'iroq
+            </a>
+        </div>
+
+        <p class="text-center text-[9px] text-slate-600 pt-3 uppercase tracking-widest font-luxury">
+            Dacha.vipclass — Reserved for the few
+        </p>
+    </footer>
+
+</main>
+
+<script>
+    // 1. Swiper Slider (Foto galereya)
+    const swiper = new Swiper('.mainSlider', {
+        loop: true,
+        autoplay: { delay: 3500, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+    });
+
+    // 2. 3D Panorama Viewer
+    pannellum.viewer('panorama', {
+        "type": "equirectangular",
+        "panorama": "https://pannellum.org/images/alma.jpg", // Dachaning 360-rasm havolasi
+        "autoLoad": true,
+        "autoRotate": -2,
+        "showControls": false
+    });
+
+    // 3. Kalendar Sanalarini Avtomatik Sozlash
+    window.addEventListener('DOMContentLoaded', () => {
+        const checkInInput = document.getElementById('checkIn');
+        const checkOutInput = document.getElementById('checkOut');
+
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+
+        checkInInput.value = today.toISOString().split('T')[0];
+        checkOutInput.value = tomorrow.toISOString().split('T')[0];
+
+        checkInInput.min = today.toISOString().split('T')[0];
+        checkOutInput.min = tomorrow.toISOString().split('T')[0];
+    });
+
+    // 4. Telegram'ga Bron Yuborish
+    function sendBooking() {
+        const inDate = document.getElementById('checkIn').value;
+        const outDate = document.getElementById('checkOut').value;
+
+        if (!inDate || !outDate) {
+            alert("Iltimos, kelish va ketish kunlarini tanlang!");
+            return;
+        }
+
+        const text = `Assalomu alaykum Samandar! Dacha.vipclass saytidan VIP bron qilish so'rovi:%0A%0A📅 Kelish: ${inDate}%0A📅 Ketish: ${outDate}`;
+        window.open(`https://t.me/samandarmexridillayev?text=${text}`, '_blank');
+    }
+</script>
+</body>
+</html>
